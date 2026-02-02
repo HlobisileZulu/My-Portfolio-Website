@@ -141,6 +141,3 @@ Add blog section for analytics case studies
 Integrate analytics to track user interaction
 
 Hosted <a href="">Here</a>
-LinkedIn: linkedin.com/in/hlobisile-m-zulu
-
-GitHub: github.com/HlobisileZulu
