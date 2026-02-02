@@ -113,19 +113,23 @@ function updateScore() {
 }
 
 // 🎮 KEYBOARD CONTROLS
-document.addEventListener("keydown", e => {
-  const keyMap = {
+  document.addEventListener("keydown", (e) => {
+    const keyMap = {
     ArrowUp: "up",
     ArrowDown: "down",
     ArrowLeft: "left",
     ArrowRight: "right",
   };
 
-  const newDirection = keyMap[e.key];
-  if (!newDirection) return;
+    if (!(e.key in keyMap)) return;
 
-  // Start game with arrow keys
-  if (!gameStarted) {
+  // Prevent page scrolling
+     e.preventDefault();
+
+   const newDirection = keyMap[e.key];
+
+  // Start game on first arrow press
+   if (!gameStarted) {
     startGame();
     direction = newDirection;
     return;
@@ -135,7 +139,8 @@ document.addEventListener("keydown", e => {
   if (oppositeDirections[direction] === newDirection) return;
 
   direction = newDirection;
-});
+  }
+  );
 
 // Initial draw
 draw();
