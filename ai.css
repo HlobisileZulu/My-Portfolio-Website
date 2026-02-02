@@ -1,0 +1,113 @@
+/* =========================
+   AI GENERATOR – SITE MATCH
+========================= */
+
+/* Container holding the AI feature */
+.container {
+  margin: 60px auto;
+  max-width: 650px;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(180, 161, 102, 0.25);
+  text-align: left;
+}
+
+/* Form wrapper */
+.form-container {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+/* Input row */
+form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Prompt input */
+.prompt {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 15px;
+  border-radius: 50px;
+  border: 1px solid rgba(180, 161, 102, 0.4);
+  background: var(--cream);
+  color: var(--charcoal);
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prompt::placeholder {
+  color: rgba(107, 105, 105, 0.6);
+}
+
+.prompt:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+/* Submit button */
+.submit-button {
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--gold);
+  color: var(--white);
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background: var(--dark-gold);
+  transform: translateY(-1px);
+}
+
+/* Helper example text */
+.example {
+  margin-top: 8px;
+  font-size: 12px;
+  color: rgba(104, 103, 103, 0.6);
+}
+
+/* Response container */
+.quote {
+  margin-top: 25px;
+  padding: 20px;
+  border-left: 4px solid var(--gold);
+  background: var(--cream);
+  color: var(--charcoal);
+  font-size: 15px;
+  line-height: 1.8;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(180, 161, 102, 0.2);
+}
+
+/* Highlight signature */
+.quote strong {
+  color: var(--dark-gold);
+}
+
+/* Loading animation */
+.blink {
+  font-style: italic;
+  color: rgba(43, 43, 43, 0.7);
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+/* Hidden utility */
+.hidden {
+  display: none;
+}
+
+/* Blink keyframes */
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

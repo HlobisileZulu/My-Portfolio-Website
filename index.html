@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hlobisile Zulu | Data Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="ai.css" />
+
+  <!-- AI LIBRARIES -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <img src="img/1000091303-removebg-preview (1).png" alt="Logo" id="logo" />
+
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button id="themeToggle">🌙</button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero reveal">
+    <img src="img/hlobi.png" alt="Hlobisile" class="my-img" />
+    <h1>Hlobisile Zulu</h1>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about reveal">
+    <h3>About Me</h3>
+    <p id="about-typewriter"></p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills reveal">
+    <h3>Skills</h3>
+    <ul>
+      <li>SQL & Data Modeling</li>
+      <li>Python (Pandas, NumPy)</li>
+      <li>Power BI & Tableau</li>
+      <li>Databricks</li>
+      <li>Marketing & Product Analytics</li>
+      <li>Cloud Platforms (AWS, Azure, GCP)</li>
+    </ul>
+  </section>
+
+  <!-- SNAKE GAME -->
+  <section class="game reveal">
+    <h3>Take a Break 🐍</h3>
+
+    <div class="scores">
+      <span id="score">000</span>
+      <span id="high-score">000</span>
+    </div>
+
+    <div class="game-border-1">
+      <div class="game-border-2">
+        <div class="game-border-3">
+          <div id="game-board"></div>
+        </div>
+      </div>
+    </div>
+
+    <p id="instruction-text">Press → (right arrow) to start</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="reveal">
+    <h3>Projects</h3>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4>Customer Churn Analysis</h4>
+        <p>This project focuses on examining customer data to identify patterns and reasons behind customer departures by using advanced data analytics. Businesses can use such predictions to observe customers that are at risk of leaving and understand the factors driving their decisions and can further create retention strategies based of the analyzed data</p>
+        <a href="https://github.com/HlobisileZulu/My_Churn_Analysis_Project" target="_blank">View Project(GitHub) →</a> <br>
+        <a href="https://public.tableau.com/app/profile/hlobisile.zulu/viz/Churn_Analysis_Dashboard_17625493058170/Dashboard1" target="_blank">View Project(Tableau) →</a>
+      </div>
+
+      <div class="project-card">
+        <h4>Heart Failure Prediction</h4>
+        <p>This project focuses on heart failure prediction, the objective is analysis of patient health data in order to predict the possibilities of heart failure and identify key factors influencing patient outcomes, this project aims to support data-driven decision-making in healthcare and enhance detection of heart failure and risks.</p>
+        <a href="https://github.com/HlobisileZulu/Heart_Failure_Prediction" target="_blank">View Project(GitHub) →</a> <br>
+        <a href="https://public.tableau.com/app/profile/hlobisile.zulu/viz/Heart_failure_prediction_Dashboard/Dashboard1" target="_blank">View Project(Tableau) →</a>
+      </div>
+
+      <div class="project-card">
+        <h4>Patient Waiting Time</h4>
+        <p>This project analyses patient waiting times in a healthcare clinic setting to uncover operational bottlenecks and support data-driven decision making. The goal is to transform raw visit-level data into actionable insights that can improve patient flow, staffing, and overall clinic efficiency.</p>
+        <a href="https://github.com/HlobisileZulu/Patient_Waiting_Time" target="_blank">View Project(GitHub) →</a> <br>
+        <a href="https://public.tableau.com/app/profile/hlobisile.zulu/viz/PatientWaitTimeDashboard_17660255268610/Dashboard1" target="_blank">View Project(Tableau) →</a>
+      </div>
+    </div>
+
+    <!-- AI SECTION -->
+    <div class="container">
+      <div class="form-container">
+        <form id="quote-generator">
+          <input
+            type="text"
+            id="user-prompt"
+            placeholder="What data-related question would you like answered?"
+            autocomplete="off"
+            required
+            class="prompt"
+          />
+          <input type="submit" value="Submit" class="submit-button" />
+        </form>
+
+        <div class="example">i.e: What is a data analyst?</div>
+      </div>
+
+      <div class="quote hidden" id="quote"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <h3>Contact</h3>
+    <p>Email: hlobiemageba@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/hlobisile-m-zulu</p>
+    <p>GitHub: github.com/HlobisileZulu</p>
+    <p>© 2026 Hlobisile Zulu</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+  <script src="snake.js"></script>
+  <script src="ai.js"></script>
+
+</body>
+</html>
